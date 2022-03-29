@@ -1,0 +1,130 @@
+{
+  "info": {
+    "_postman_id": "94e3b19f-aab2-4aa1-adee-78bfbb428b6a",
+    "name": "STAGING",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "aa9c0b84-bfa5-4157-8310-0f62f06c3970",
+            "exec": [
+              "const d = [{",
+              "\t\"RCVNM\": \"SRIDHAR TEST\",",
+              "\t\"RCVNM_HURL\": \"\",",
+              "\t\"HP_NO\": \"12121110\",",
+              "\t\"TEL_NO\": \"12121110\",",
+              "\t\"ZIP_CODE\": \"120334\",",
+              "\t\"DEL_FRONTADDRESS\": \"tees \",",
+              "\t\"DEL_BACKADDRESS\": null,",
+              "\t\"BUY_CUSTEMAIL\": \"sridhar.panneerselvam16@gmail.com\",",
+              "\t\"DELIVERY_NATIONCD\": \"SG\",",
+              "\t\"DELIVERY_OPTION_CODE\": \"RM\",",
+              "\t\"SELL_CUSTNM\": \"test@gmail.com\",",
+              "\t\"START_NATIONCD\": \"SG\",",
+              "\t\"REMARK\": \"\",",
+              "\t\"PACKAGE_WEIGHT\": \"1\",",
+              "\t\"ORDER_SITE_NM\": \"SG\",",
+              "\t\"DPC3REFNO1\": \"STG_20017803\",",
+              "\t\"ITEM_NM\": \"PantsX1, SHIRTx3\",",
+              "\t\"QTY\": \"1\",",
+              "\t\"PURCHAS_AMT\": \"100\",",
+              "\t\"CURRENCY\": \"SGD\",",
+              "\t\"ITEM_CD\": null,",
+              "\t\"ITEM_URL\": \"\",",
+              "\t\"SENDER_NM\": \"ONI GLOBAL\",",
+              "\t\"SENDER_ZIP_CODE\": \"408939\",",
+              "\t\"SENDER_FRONT_ADDR\": \"65 Ubi Ave 1,OSIM Headquarters\",",
+              "\t\"SENDER_BACK_ADDR\": \"Level 6, Singapore 408939\",",
+              "\t\"SENDER_TEL_NO\": \"6281 5689\",",
+              "\t\"SENDER_HP_NO\": \"6281 5680\"",
+              "}];",
+              "",
+              "pm.collectionVariables.set(\"data\", JSON.stringify(d));"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "23bfbd93-9c1b-4833-a021-30c86fbda91c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "apiKey",
+              "value": "{{apiKey}}",
+              "type": "text"
+            },
+            {
+              "key": "accountId ",
+              "value": "delyva",
+              "type": "text"
+            },
+            {
+              "key": "makingOrders",
+              "value": "{{data}}",
+              "type": "text"
+            }
+          ],
+          "options": {
+            "urlencoded": {}
+          }
+        },
+        "url": "{{URL}}CreateOrder"
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "d0ff908f-b04d-441e-b8ad-f8e340413f18",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "abeceeeb-f2c3-417f-875e-ca38f8f4eaa9",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "add5585f-cdd7-49fe-bea4-3ffb31279a94",
+      "key": "URL",
+      "value": "https://qxapi.qxpress.net/GMKT.INC.GLPS.OpenApiService/SmartShipApi.qapi/",
+      "type": "string"
+    },
+    {
+      "id": "142290bd-e281-49b9-a638-42b977f6ab2c",
+      "key": "apiKey",
+      "value": "QXAPIV1s5Lx8_g_1_WnCKQkOWwaoPClK6U5tR5Vfyv1",
+      "type": "string"
+    },
+    {
+      "id": "f6600e6e-ce37-451b-b5b8-efd79f580eeb",
+      "key": "data",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}
