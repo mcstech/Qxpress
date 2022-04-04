@@ -50,7 +50,7 @@
           }
         }
       ],
-      "_postman_id": "23bfbd93-9c1b-4833-a021-30c86fbda91c",
+      "id": "23bfbd93-9c1b-4833-a021-30c86fbda91c",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -75,10 +75,7 @@
               "value": "{{data}}",
               "type": "text"
             }
-          ],
-          "options": {
-            "urlencoded": {}
-          }
+          ]
         },
         "url": "{{URL}}CreateOrder"
       },
@@ -109,19 +106,19 @@
   ],
   "variable": [
     {
-      "id": "add5585f-cdd7-49fe-bea4-3ffb31279a94",
+      "id": "f20e4deb-fa8f-445e-b283-9e4126c6808a",
       "key": "URL",
       "value": "https://qxapi.qxpress.net/GMKT.INC.GLPS.OpenApiService/SmartShipApi.qapi/",
       "type": "string"
     },
     {
-      "id": "142290bd-e281-49b9-a638-42b977f6ab2c",
+      "id": "b6b23f7b-37f1-4a7b-8c4d-095d9d131917",
       "key": "apiKey",
       "value": "QXAPIV1s5Lx8_g_1_WnCKQkOWwaoPClK6U5tR5Vfyv1",
       "type": "string"
     },
     {
-      "id": "f6600e6e-ce37-451b-b5b8-efd79f580eeb",
+      "id": "0a8f79e5-f1cb-4998-9d82-396572ff7a7c",
       "key": "data",
       "value": "",
       "type": "string"
